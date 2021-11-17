@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:regular,bold,italic&subset=latin,latin-ext');
+
+header, footer{
+    display: flex;
+    color: rgb(142, 172, 207);
+    font-family: Work Sans;
+
+}
+.line{
+    height: 1px;
+    width: 200%;
+    background: #858585;
+    position: fixed;
+}
+
+@media (max-width: 790px) {
+
+    header, footer, .main, .main-wrapper{
+        padding: 0 25px 0 25px;
+
+    }
+
+    header{
+        height: 49px;
+    }
+    .sidebar-space{
+        width:  50px;
+    }
+    .line{
+        top: 49px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 790px) {
+
+    header, footer, .main, .main-wrapper{
+        padding: 0 100px 0 100px;
+
+    }
+    .sidebar-space{
+        width:  99px;
+    }
+
+    .line{
+        top: 56px;
+    }
+}
+@media (min-width: 1200px) {
+
+    header, footer, .main, .main-wrapper{
+        padding: 0 250px 0 250px;
+
+    }
+
+    .sidebar-space{
+        width:  150px;
+    }
+
+    .line{
+        top: 56px;
+    }
+
+}
+@media (min-width: 790px) {
+    header{
+        height: 60px;
+    }
+}
+
+
+.main{
+    font-family: Work Sans;
+
+}
+
+header{
+    align-items: center;
+    font-weight: bold;
+}
+
+footer{
+    padding-top: 70px;
+    height: 342px;
+}
+
+.link-router{
+    font-family: Work Sans;
+    text-decoration: none;
+}
+
+.link-blue{
+    color: rgb(142, 172, 207);
+
+}
+.link-dark{
+    color: rgb(49, 51, 62);
+}
+.link-white{
+    color: rgb(255, 255, 255);
+}
+
+
+.main-wrapper{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+Link{
+    text-decoration: none;
+}

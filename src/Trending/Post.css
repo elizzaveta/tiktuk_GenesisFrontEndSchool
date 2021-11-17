@@ -1,0 +1,151 @@
+.post{
+    margin-bottom: 50px;
+    width: 58%;
+    display: flex;
+    flex-direction: row;
+}
+.post-left{
+    display: flex;
+    flex-direction: column;
+
+}
+.post-right{
+    float: right;
+
+}
+.avatar{
+    height: 50px;
+
+}
+video{
+    height: 570px;
+
+}
+.avatar{
+    border-radius: 50%;
+}
+.trending-avatar-name>img{
+    margin-right: 15px;
+
+}
+.user-name-tr{
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+.user-nickname-tr{
+    font-size: 16px;
+    color: gray;
+
+}
+.trending-avatar-name{
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.post-text-video{
+    margin-left: 65px;
+}
+.button-pink-borders-t img{
+    height: 16px;
+}
+.button-pink-borders-t{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Work Sans;
+    border-radius: 5px;
+    border: solid 1px #D2436E;
+    background-color: white;
+    font-weight: bold;
+    color: #D2436E;
+}
+.button-d-flex{
+    display: flex;
+    padding: 5px 5px;
+}
+.play-button {
+    position: relative;
+    z-index: 10;
+    left: 5%;
+    cursor: pointer;
+}
+.play-button> img{
+    height: 16px;
+
+}
+.stats-icon{
+    background: #e5e5e5;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stats-icon>img{
+    height: 17px;
+}
+
+.white-button{
+    background-color: white;
+
+}
+.subscr-stats{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 15px;
+}
+@media (max-width: 600px) {
+    .post-text-video{
+        margin-left: 0;
+    }
+    .trending-video{
+        height: 361px;
+
+    }
+    .play-button {
+        top: 330px;
+    }
+}
+@media (max-width: 790px) and (min-width: 600px) {
+    .post-text-video{
+        margin-left: 0;
+    }
+    .trending-video{
+        height: 508px;
+        width: 280px;
+
+    }
+    .play-button {
+        top: 480px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 790px) {
+    .post-text-video{
+        margin-left: 65px;
+    }
+    .trending-video{
+        height: 508px;
+        width: 280px;
+
+    }
+    .play-button {
+        top: 480px;
+    }
+}
+@media (min-width: 1200px) {
+    .post-text-video{
+        margin-left: 65px;
+    }
+    .trending-video{
+        height: 508px;
+        width: 280px;
+
+    }
+    .play-button {
+        top: 480px;
+    }
+}

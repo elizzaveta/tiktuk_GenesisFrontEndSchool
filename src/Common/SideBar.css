@@ -1,0 +1,50 @@
+.sidebar-desktop{
+    font-size: 20px;
+    font-weight: bold;
+    color: #858585;
+    position: fixed;
+    top: 96px;
+}
+.sidebar-desktop > div{
+    margin-bottom: 20px;
+}
+.sidebar-link{
+    text-decoration: none;
+}
+.mobile-sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 96px;
+}
+.mobile-sidebar img{
+    margin-bottom: 20px;
+}
+.sidebar-desktop img{
+    margin-right: 5px;
+    height: 20px;
+}
+.gray{
+    color: #858585;
+}
+.pink{
+    color: #D2436E;
+
+}
+
+
+
+@media (max-width: 790px) {
+    .mobile-sidebar img{
+        height: 20px;
+    }
+
+}
+@media (max-width: 1200px) and (min-width: 790px) {
+    .mobile-sidebar img{
+        height: 25px;
+    }
+
+}
+
+

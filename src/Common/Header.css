@@ -1,0 +1,139 @@
+
+header{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.h-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: white;
+    height: 56px;
+}
+
+.company-name{
+    margin-right: 54px;
+    color: #8EACCF;
+    font-family: Work Sans;
+
+}
+
+.links{
+    font-size: 16px;
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    cursor: pointer;
+    height: 20px;
+}
+.menu-details{
+    position: absolute;
+    z-index: 50;
+    left: 50%;
+    width: 50%;
+    color: rgb(49, 51, 62);
+    display: flex;
+    flex-direction: column;
+    background: #ececec;
+    height: 100vh;
+    align-items: center;
+    padding-top: 50px;
+}
+.menu-shadow{
+    background: rgba(0, 0, 0, 0.57);
+    position: absolute;
+    z-index: 49;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+
+}
+.search-in-menu{
+    display: flex;
+    flex-direction: column;
+}
+.buttons-in-menu-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Work Sans;
+    border-radius: 5px;
+    border: none;
+    padding: 7px 12px;
+}
+
+.white-button{
+    background-color: white;
+
+}
+.pink-button{
+    background-color: #D2436E;
+    font-weight: bold;
+    color: white;
+}
+.grey-button{
+    background-color:  rgba(128, 128, 128, 0.18);
+    font-weight: bold;
+    color: dimgray;
+    border: solid 1px white;
+    padding: 5px 7px;
+    height: 29px;
+    border-radius: 0;
+}
+.search-input{
+    height: 28px;
+    width: 190px;
+    border: none;
+    background: rgba(128, 128, 128, 0.18);
+}
+
+.links-in-menu{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 790px) {
+    .company-name{
+        font-size: 20px;
+    }
+    .logo{
+        height: 25px;
+        width: 42px;
+    }
+    .menu-details, .menu-shadow{
+        top: 49px;
+    }
+}
+@media (min-width: 790px) {
+    .company-name {
+        font-size: 24px;
+    }
+
+    .logo {
+        height: 35px;
+        width: 60px;
+    }
+
+    .menu-details, .menu-shadow {
+        top: 60px;
+    }
+}
