@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# TikTuk
+## В проекте реализовано:
+- страница трендовых видео:
+    - контент: видео, текст
+    - аватар и имя юзера. Нажатие на любой из них ведет к странице юзера
+    - хештеги (в тексте видео они уже есть, но есть закомментированный код, который работает именно с набором хештегов в ответе)
+    - количество лайков, комментариев, нажатий поделиться
+- страница пользователя:
+    - информация про юзера(аватар, имя, ник, био, количество подписчиков, подписок, лайков)
+    - список видео(обложек видео), количество просмотров каждого
+- получение данных с помощью fetch от RapidApi
+ 
+## Дополнительные функции:
+- видео на странице трендовых видео можно ставить на паузу нажатием на соответствующую иконку в углу видео
+- адаптив под мобильную версию:
+    - хедер сворачивается в название и меню, всплывающее при нажатии
+    - контент страниц видоизменяется в зависимости от ширины экрана
+- кликабельные так же:
+    - название сайта (ведет к домашней странице)
+    - меню мобильной версии(с изменением иконки меню, сворачиванием при нажатии на поле вокруг)
+    - поле Trending в боковом меню
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Комментарии:
+Для доступа к апи нужна подписка, к проекту подключен ключ с бесплатной подпиской, с ограничением в 100 подключений в месяц и 10 запросов в минуту. Если лимит окажется исчерпанным в процессе проверки проекта, заметить ключ можно в файле ./src/commonFunctions.js на 51й строчке. 
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Так же ответ апи на получение постов пользователя (get user feed) иногда некорректный (код ответа 200, но содержимое не соответствует ожидаемому ответу), потому для проверки отображения можно заменить ссылку для fetch в файле ./src/User/UserFeed.js на ссылку на апи typicode json server (содержится информация о 3х постах пользователей kikakiim и elaine.victoria), строчки файла 18, 19.
