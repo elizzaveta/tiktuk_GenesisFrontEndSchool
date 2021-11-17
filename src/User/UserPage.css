@@ -39,15 +39,16 @@
     background: #858585;
 }
 .play-count{
-    position: relative;
+    position: absolute;
     z-index: 10;
     color: white;
     font-weight: bold;
-    top: 90%;
-    left: 5%;
+    bottom: 26px;
+    left: 13px;
 }
 .feed-post{
     flex-direction: row;
+    position: relative;
 }
 .button-pink-borders{
     text-align: center;

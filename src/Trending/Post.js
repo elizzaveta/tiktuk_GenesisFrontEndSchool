@@ -10,8 +10,8 @@ import follow from '../icons/following-pink.png'
 import {status, json, numbToString, rapidKey} from "../commonFuncitons";
 
 function Trending() {
-    const url = `https://tiktok33.p.rapidapi.com/trending/feed`
-    // const url = `https://my-json-server.typicode.com/elizzaveta/trending/trending`
+    // const url = `https://tiktok33.p.rapidapi.com/trending/feed`
+    const url = `https://my-json-server.typicode.com/elizzaveta/trending/trending`
 
     const [fetchData, setFetchData] = useState({
         data: null

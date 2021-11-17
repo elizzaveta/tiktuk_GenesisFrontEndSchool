@@ -27,7 +27,7 @@ function UserPage() {
             .then(json)
             .then(response => {
                 setFetchData({
-                    data: response
+                    data: response[name]
                 })
             });
     }, [url])

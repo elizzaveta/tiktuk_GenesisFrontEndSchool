@@ -10,13 +10,14 @@ function UserFeed() {
     // !! is not user feed
     // !! to see render example try to comment tiktok url line bellow and uncomment typicode url line instead
     // !! (typicode url contains 3 feed video of kikakiim and elaine.victoria users only)
-
+    // !! (update) now trending data can be used instead of user feed (line 20)
 
 
     let typicode = false
 
-    const url = `https://tiktok33.p.rapidapi.com/user/feed/`+name;
+    // const url = `https://tiktok33.p.rapidapi.com/user/feed/`+name;
     // const url = `https://my-json-server.typicode.com/elizzaveta/user_feed3/user_feed`;
+    const url = `https://tiktok33.p.rapidapi.com/trending/feed`
 
     if(url === `https://my-json-server.typicode.com/elizzaveta/user_feed3/user_feed`) typicode = true
     
@@ -49,15 +50,26 @@ function UserFeed() {
 
     let posts_content = null;
     if (fetchData && fetchData.data!==undefined) {
-        console.log(fetchData)
-        posts_content =
-            fetchData.data.map((item, key)=>
-                <div key={key} className="feed-post">
-                    <div className="play-count">{numbToString(item.stats.playCount)}</div>
-                    {/*<video className="user-feed-video" src={item.video.playAddr} controls />*/}
-                    <img className="user-feed-video" src={item.video.cover} alt="video"/>
-                </div>
-            )
+        if(url !== `https://tiktok33.p.rapidapi.com/trending/feed`){ // case when you use user feed urls
+            posts_content =
+                fetchData.data.map((item, key)=>
+                    <div key={key} className="feed-post">
+                        <div className="play-count">{numbToString(item.stats.playCount)}</div>
+                        {/*<video className="user-feed-video" src={item.video.playAddr} controls />*/}
+                        <img className="user-feed-video" src={item.video.cover} alt="video"/>
+                    </div>
+                )
+        }
+        else{ // case when you use trending data instead of user feed
+            posts_content =
+                fetchData.data.map((item, key)=>
+                    <div key={key} className="feed-post">
+                        <div className="play-count">{numbToString(item.playCount)}</div>
+                        <video className="user-feed-video" src={item.videoUrl} />
+                        {/*<img className="user-feed-video" src={item.videoUrl} alt="video"/>*/}
+                    </div>
+                )
+        }
     }
 
     return (
