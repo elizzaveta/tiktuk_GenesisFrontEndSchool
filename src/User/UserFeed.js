@@ -15,8 +15,8 @@ function UserFeed() {
 
     let typicode = false
 
-    // const url = `https://tiktok33.p.rapidapi.com/user/feed/`+name;
-    const url = `https://my-json-server.typicode.com/elizzaveta/user_feed3/user_feed`;
+    const url = `https://tiktok33.p.rapidapi.com/user/feed/`+name;
+    // const url = `https://my-json-server.typicode.com/elizzaveta/user_feed3/user_feed`;
 
     if(url === `https://my-json-server.typicode.com/elizzaveta/user_feed3/user_feed`) typicode = true
     

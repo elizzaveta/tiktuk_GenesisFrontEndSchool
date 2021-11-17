@@ -9,8 +9,8 @@ import "../App.css"
 function UserPage() {
     const {name} = useParams()
 
-    // const url = `https://tiktok33.p.rapidapi.com/user/info/`+name
-    const url = `https://my-json-server.typicode.com/elizzaveta/user_info/user_info`
+    const url = `https://tiktok33.p.rapidapi.com/user/info/`+name
+    // const url = `https://my-json-server.typicode.com/elizzaveta/user_info/user_info`
 
     const [fetchData, setFetchData] = useState(null)
 
@@ -27,7 +27,7 @@ function UserPage() {
             .then(json)
             .then(response => {
                 setFetchData({
-                    data: response[name] // change it when moving to tt api (data: response)
+                    data: response
                 })
             });
     }, [url])
